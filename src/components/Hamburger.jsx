@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { X, Menu } from 'lucide-react';
+import React, { useState } from "react";
+import { X, Menu } from "lucide-react";
 
 const HamburgerSidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +25,7 @@ const HamburgerSidebar = () => {
       {/* Sidebar */}
       <div
         className={`fixed top-0 right-0 h-full w-64 bg-neutral-900 text-white z-50 transform transition-transform duration-300 ${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
+          isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         {/* Close Button */}
@@ -36,18 +36,22 @@ const HamburgerSidebar = () => {
         </div>
 
         {/* Menu Items */}
-        <div className='flex flex-col justify-between gap-[610px]'>
-            <div className="flex flex-col space-y-4 px-6">
-                <a href="analysis" className="hover:text-lime-400 transition p-2 text-center bg-neutral-800">Analysis</a>
-                <a href="chatBot" className="hover:text-lime-400 transition p-2 text-center bg-neutral-800">ChatBot</a>
-                <a href="basic-terms" className="hover:text-lime-400 transition p-2 text-center bg-neutral-800">Basic Terms</a>
-                <a href="about" className="hover:text-lime-400 transition p-2 text-center bg-neutral-800">About</a>
-            </div>
-            <div className='text-center text-2xl font-bold pr-4'>
-                FinanceAI
-            </div>
+        <div className="flex flex-col justify-between gap-[610px]">
+          <div className="flex flex-col space-y-4 px-6">
+            <a
+              href="/analyse"
+              className="hover:text-lime-400 transition p-2 text-center bg-neutral-800"
+            >
+              Analysis
+            </a>
+            <a
+              href="knowthejargon"
+              className="hover:text-lime-400 transition p-2 text-center bg-neutral-800"
+            >
+              Know The Jargon
+            </a>
+          </div>
         </div>
-        
       </div>
     </>
   );
